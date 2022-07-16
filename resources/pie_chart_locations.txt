@@ -1,0 +1,17 @@
+let pie_chart_locations_csv = `BUNDESLAND_NAME,LONG,LAT
+Baden-Württemberg,9.003889,48.661944
+Bayern,11.404167,48.946389
+Berlin,15.404194,52.902889
+Brandenburg,13.915833,51.959028
+Bremen,7.710585,54.313753
+Hamburg,11.828889,54.568888
+Hessen,9.02687,50.600838
+Mecklenburg-Vorpommern,12.575558,53.7735
+Niedersachsen,9.576019,52.839842
+Nordrhein-Westfalen,7.555,51.478333
+Rheinland-Pfalz,7.310417,49.955139
+Saarland,6.378333,48.876944
+Sachsen,13.344958,51.052931
+Sachsen-Anhalt,11.702667,52.009056
+Schleswig-Holstein,9.822222,54.185556
+Thüringen,11.026389,50.903333`

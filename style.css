@@ -1,0 +1,416 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  color: rgb(50, 50, 50);
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  /* font-family: ff-tisa-sans-web-pro, sans-serif; */
+  font-family: century-gothic,sans-serif;
+  overflow: hidden;
+}
+
+/* Flex layout for responsive height of content */
+#page {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+/* region HEADER */
+#header {
+    background-color: rgb(0, 148, 64);
+    height: 90px;
+    padding: 13px 12px 14px 12px;
+
+    flex: 0 1 auto;
+}
+
+#logo {
+    position: relative;
+    width: 90px;
+}
+
+#logo-image {
+    position: absolute;
+    width: 50px;
+    bottom: 0;
+    right: 0;
+    margin: 9px;
+}
+
+#logo-watermark-container {
+    width: 309px;
+    position: absolute;
+    right: 0;
+    top: 27px;
+    height: inherit;
+    margin-right: 12px;
+    overflow: hidden;
+    opacity: 0.3;
+}
+
+#logo-text {
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    margin: 3px;
+    bottom: 0;
+    right: 0;
+}
+
+
+
+#info-vis-text-box {
+    min-width: 200px;
+}
+
+#group-text-box {
+    min-width: 640px;
+}
+
+#group-text {
+    font-size: 28px;
+}
+
+.header-text {
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    font-size: 12px;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    margin: 6px;
+}
+
+.lmu-box {
+    position: relative;
+    border: 1px solid white;
+    height: inherit;
+    margin-right: 8px;
+    display: inline-block;
+}
+/* endregion HEADER */
+
+/* Flex layout for responsive width of content */
+#content-container {
+    flex: 1 1 auto;
+    display: flex;
+}
+
+.content {
+    display: inline-block;
+    height: 100%;
+}
+
+.content-box {
+    background-color: #e6e6e6;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+/* region FILTER */
+#filter-container {
+    height: inherit;
+    flex: 0 1 auto;
+    width: 300px;
+    min-width: 300px;
+    background-color: #efefef;
+    box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+    text-align: center;
+    vertical-align: middle;
+    color: black;
+}
+
+#filter-heading {
+    font-variant: small-caps;
+    padding: 6px 0;
+    border-bottom: 1px solid black;
+    margin: 0 12px;
+    font-size: 22px;
+}
+
+#filter-list-desc {
+    padding: 6px 0;
+    margin-top: 12px;
+}
+
+#filter-list {
+	list-style: none;
+	margin: 0;
+	padding: 6px 0;
+}
+
+.filter-list-item {
+    cursor: pointer;
+    margin: 12px 12px;
+    padding: 12px 6px 12px 0;
+    background-color: #d6dfda;
+    border-left: 4px solid #d6dfda;
+    color: #8d8d8d;
+    display: flex;
+    text-align: left;
+    align-items: center;
+}
+
+.filter-list-item:hover {
+    background-color: #cdd6d1;
+    border-left: 4px solid #cdd6d1;
+}
+
+.filter-active {
+    background-color: white;
+    border-left: 4px solid #009440;
+    color: #505050;
+    box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+}
+
+.filter-active:hover {
+    background-color: #f5f5f5;
+    border-left: 4px solid #009440;
+}
+
+.filter-icon {
+    vertical-align: sub;
+    width: 20px;
+    height: 20px;
+    flex: 0 1 auto;
+    margin: 0 12px;
+}
+
+.filter-icon-hide {
+    display: none;
+}
+
+.filter-title {
+    flex: 1 1 auto;
+}
+/* endregion FILTER */
+
+/* region MAP */
+#map-container {
+    /* float: left; */
+    width: 750px;
+    min-width: 750px;
+    flex: 0 1 auto;
+    padding: 12px 6px 12px 12px;
+    box-sizing: border-box;
+}
+
+#map-inner-container {
+    flex-direction: column;
+    display: flex;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+#map {
+    height: inherit;
+    flex: 0 1 auto;
+}
+
+#color-legend {
+    float: left;
+    position: absolute;
+    width: fit-content;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+#color-legend-upper-limit {
+    flex: 0 1 auto;
+}
+
+#color-legend-gradient {
+    flex: 1 1 auto;
+    width: 25px;
+    margin: 15px 0;
+}
+
+#color-legend-lower-limit {
+    flex: 0 1 auto;
+}
+
+#legend {
+    float: left;
+    position: absolute;
+    pointer-events: none;
+}
+
+
+/* region SLIDER Source: https://www.w3schools.com/howto/howto_js_rangeslider.asp [25.11.2021] */
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    align-items: center;
+    border-radius: 5px;  
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: rgb(0, 148, 64);
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: rgb(0, 148, 64);
+    cursor: pointer;
+}
+/* endregion SLIDER */
+
+/* region TICKS FOR SLIDER Source: https://stackoverflow.com/questions/26612700/ticks-for-type-range-html-input [25.11.2021] */
+#slidecontainer datalist {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+#slidecontainer option {
+    width: 2ex;
+    display: flex;
+    justify-content: center;
+    height: 42px;
+    align-items: end;
+    height: 4ex;
+    font-weight: bold;
+    background-image: url(images/tick.svg);
+    background-repeat: no-repeat;
+    background-position-y: 6px;
+    background-position-x: center;
+    background-size: 8px;
+}
+
+/* For better distinction every 2nd element is brighter (TODO: maybe just show every 2nd year as text?) */
+#slidecontainer option:nth-child(2n) {
+    background-image: url(images/tick_bright.svg);
+    /* color: #898989; */
+    color: #e6e6e6;
+    font-size: 0;
+}
+/* endregion TICKS FOR SLIDER  */
+
+#slidecontainer {
+    flex: 1 1 auto;
+    margin: 0 11px;
+}
+/* endregion MAP */
+
+/* region DETAILS */
+#info-container {
+    flex: 1 1 auto;
+    padding: 12px 12px 12px 6px;
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#details-container {
+    padding: 12px;
+    flex: 0 1 auto;
+    border-radius: 8px 8px 0 0;
+}
+
+#state-parteien {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#state-parteien li {
+    flex: 1 1 0px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 6px;
+    margin: 0 6px;
+    background-color: #cbcbcb;
+}
+
+#state-parteien li:first-child {
+    margin-left: 0;
+}
+
+#state-parteien li:last-child {
+    margin-right: 0;
+}
+
+#state-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+#stacked-bar-container {
+    flex: 0 1 100px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0;
+    /* flex: 0 1 auto; */
+    /* height: 100px; */
+    margin-top: 12px;
+}
+
+#chart-container {
+    flex: 1 1 auto;
+    margin-top: 12px;
+    border-radius: 0 0 8px 8px;
+}
+
+#graph {
+    height: 100%;
+}
+
+#stacked-bar {
+    text-align: center;
+    /* height: 100%; */
+    flex: 1 1 auto;
+    width: 100%;
+}
+
+#stacked-bar-desc {
+    text-align: center;
+    flex: 0 1 auto;
+    margin-bottom: 12px;
+}
+
+/* endregion DETAILS */
+/* endregion CONTENT */
+
+#bar-chart {
+    height: 100%;
+    width: 100%;
+}
+
+/* .bar-icon {
+    height: 40px;
+    width: 40px;
+} */
+
+.tooltip {
+    background-color: #5c5c5c;
+    position: absolute;
+    pointer-events: none;
+    color: white;
+    border-width: 1px;
+    border-radius: 5px;
+    padding: 10px;
+    padding: 10px 15px;
+}
