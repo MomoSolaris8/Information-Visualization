@@ -1,10 +1,17 @@
-
-
-# InfoVis Team 21
-LMU-WS21/22-IV-Group 21- Visualization 
+# Information-Visualization 
+LMU-WS21/22-IV-Group21- Visualization 
+***
 We are Momo, David, Verena, Andi, and Romy from group 21 of the Information Visualisation Project.
 
 Our website (https://www.cip.ifi.lmu.de/~muellerdav/) is all about the correlation between patents and the election results of the individual German states. We want to display government parties (coalitions) to show how much these parties have influenced the emergence of patents and display election results to show how people's political mood is in relation to patents.
+
+
+### Team members
+- Wenfeng Zhu (Master Human-Computer Interaction)
+- Shaohua Tong (Master Computer Science)
+- Yukun Chen (Master Computer Science)
+- Chenke Xie (Master Computer Science)
+- Shuaicong Wu (Master Computer Science)
 
 ## Implemented Features
 
