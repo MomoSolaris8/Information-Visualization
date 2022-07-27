@@ -1,3 +1,5 @@
+
+LMU-WS21/22-IV-Group 21- Visualization 
 # InfoVis Team 21
 
 We are Momo, David, Verena, Andi, and Romy from group 21 of the Information Visualisation Project.
