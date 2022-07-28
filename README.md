@@ -7,11 +7,6 @@ Our website (https://www.cip.ifi.lmu.de/~muellerdav/) is all about the correlati
 
 
 ### Team members
-- Wenfeng Zhu (Master Human-Computer Interaction)
-- Shaohua Tong (Master Computer Science)
-- Yukun Chen (Master Computer Science)
-- Chenke Xie (Master Computer Science)
-- Shuaicong Wu (Master Computer Science)
 
 ## Implemented Features
 
